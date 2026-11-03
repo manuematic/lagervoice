@@ -1,0 +1,15 @@
+language: "de"
+intents:
+  HomeboxSuche:
+    data:
+      - sentences:
+          - "Inventarsuche {gegenstand}"
+          - "Wo ist {gegenstand}"
+          - "Wo ist mein {gegenstand}"
+          - "Wo ist meine {gegenstand}"
+          - "Wo sind {gegenstand}"
+          - "Wo sind meine {gegenstand}"
+
+lists:
+  gegenstand:
+    wildcard: true

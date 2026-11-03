@@ -1,0 +1,17 @@
+HomeboxSuche:
+  action:
+    - action: shell_command.homebox_suche
+      data:
+        gegenstand: "{{ gegenstand }}"
+      response_variable: homebox_result
+
+    - stop: ""
+      response_variable: homebox_result
+
+  speech:
+    text: >-
+      {% if action_response.returncode == 0 %}
+        {{ action_response.stdout | trim }}
+      {% else %}
+        Entschuldigung, ich konnte Homebox gerade nicht abfragen.
+      {% endif %}

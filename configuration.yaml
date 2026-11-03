@@ -1,0 +1,3 @@
+# Suche in Homebox per Homebox API
+shell_command:
+  homebox_suche: !secret homebox_shell_command
